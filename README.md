@@ -1,4 +1,30 @@
-# Assessment Codebase Guide
+# Creator Card Microservice API
+
+This is the implementation of the Creator Card microservice API assessment.
+
+**Endpoints:**
+- `POST /creator-cards` — Create a creator card
+- `GET /creator-cards/:slug` — Publicly retrieve a creator card
+- `DELETE /creator-cards/:slug` — Soft-delete a creator card
+
+## Deploy to Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/olaitan6201/creator-card-microservice-api.git)
+
+After clicking the button, set `MONGODB_URI` to your MongoDB connection string when prompted.
+
+## Local Testing
+
+```bash
+npm install
+# ensure MONGODB_URI is set in .env
+node bootstrap.js
+./tests/creator-cards.sh
+```
+
+---
+
+## Assessment Codebase Guide
 
 This guide will help you understand the codebase architecture and set up your services, endpoints, and middleware correctly. This is NOT a solution to the assessment - it's a reference guide to help you implement your own solution following the codebase conventions.
 

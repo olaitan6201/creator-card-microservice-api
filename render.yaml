@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: creator-card-microservice-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node bootstrap.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: APP_NAME
+        value: Creator Card API
+      - key: APP_BASE_URL
+        value: https://creator-card-microservice-api.onrender.com
+      - key: PINO_LOG_LEVEL
+        value: info
+      - key: MONGODB_URI
+        sync: false
