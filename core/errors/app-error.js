@@ -17,6 +17,10 @@ function appError(errorMessage, errorCode = 'ERR', options = {}) {
     error.details = options.details;
   }
 
+  if (options.responseCode || options.code) {
+    error.responseCode = options.responseCode || options.code;
+  }
+
   throw error;
 }
 
